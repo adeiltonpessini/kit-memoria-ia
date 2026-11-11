@@ -1,0 +1,40 @@
+{
+  "name": "kit-memoria-ia",
+  "version": "1.0.0",
+  "description": "Memória de projeto e economia de token para qualquer IA de código (Claude Code, Codex, Gemini CLI, Cursor, Copilot). Markdown simples, sem RAG, sem dependência.",
+  "type": "module",
+  "bin": {
+    "kit-memoria-ia": "kit.mjs"
+  },
+  "scripts": {
+    "test": "node --test tools/claude/*.test.mjs",
+    "audit": "node tools/claude/skills-audit.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "kit.mjs",
+    "instalar.mjs",
+    "modelos/",
+    "tools/",
+    ".claude/",
+    "*.exemplo.json",
+    "settings.global.recomendado.json",
+    "LICENSE",
+    "LICENSES/",
+    "NOTICE",
+    "MARCA.md",
+    "GUIA.md",
+    "INSTALAR.md"
+  ],
+  "keywords": ["ai", "claude-code", "codex", "gemini-cli", "cursor", "copilot", "agents-md", "skills", "memoria", "tokens"],
+  "author": "Adeilton Pessini (https://github.com/adeiltonpessini)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adeiltonpessini/kit-memoria-ia.git"
+  },
+  "homepage": "https://github.com/adeiltonpessini/kit-memoria-ia#readme",
+  "bugs": "https://github.com/adeiltonpessini/kit-memoria-ia/issues"
+}

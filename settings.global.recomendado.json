@@ -1,0 +1,8 @@
+{
+  "model": "opus",
+  "effortLevel": "medium",
+  "autoCompactWindow": 200000,
+  "skillListingMaxDescChars": 400,
+  "language": "pt-br",
+  "env": { "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet" }
+}

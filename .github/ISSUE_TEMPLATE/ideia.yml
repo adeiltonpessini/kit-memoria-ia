@@ -1,0 +1,17 @@
+name: Ideia
+description: Peça, skill ou melhoria nova
+labels: [ideia]
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema resolve
+      description: O que gasta token ou tempo hoje
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Como seria
+    validations:
+      required: true

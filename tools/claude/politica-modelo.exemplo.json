@@ -1,0 +1,22 @@
+{
+  "_leia": "Exemplo. Copie para <projeto>/.claude/politica-modelo.json e liste os seus agentes. Economia vem do tiering de SUBAGENTE por risco; quem conversa com você fica no modelo que você escolheu.",
+  "tiers": {
+    "alto_risco": {
+      "model": "opus",
+      "why": "Dado ao vivo, schema, segurança: erro caro ou irreversível."
+    },
+    "padrao": {
+      "model": "sonnet",
+      "why": "Trabalho de rotina (features, testes, docs): boa relação custo e qualidade."
+    },
+    "leve_mecanico": {
+      "model": "haiku",
+      "why": "Busca e citação mecânica, baixa criatividade e baixo risco."
+    }
+  },
+  "agentes": {
+    "backend-dev": "alto_risco",
+    "qa": "padrao",
+    "explorador": "leve_mecanico"
+  }
+}

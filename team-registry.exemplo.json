@@ -1,0 +1,32 @@
+{
+  "_leia": "Roteamento do despacho-gate. Copie para docs/agentes/team-registry.json. slug = nome do arquivo em .claude/agents/ (ou o prefixo antes do -); routingKeywords = regex sem barra, uma pontuação por acerto. Playbook longo de cada agente em docs/agentes/<slug>.md.",
+  "personas": [
+    {
+      "slug": "backend",
+      "routingKeywords": [
+        "api\\b",
+        "endpoint",
+        "servi[çc]o",
+        "bancos+des+dados"
+      ]
+    },
+    {
+      "slug": "frontend",
+      "routingKeywords": [
+        "tela",
+        "componente",
+        "css\\b",
+        "layout"
+      ]
+    },
+    {
+      "slug": "qa",
+      "routingKeywords": [
+        "teste",
+        "cobertura",
+        "e2e",
+        "regress"
+      ]
+    }
+  ]
+}

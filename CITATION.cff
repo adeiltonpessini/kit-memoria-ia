@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Se usar este kit em trabalho publicado, cite assim."
+title: "kit-memoria-ia"
+abstract: "Memória de projeto, economia de token e ferramental para IAs de código (Claude Code, Codex, Gemini CLI, Copilot, Cursor), sem RAG de embeddings."
+type: software
+authors:
+  - family-names: "Pessini"
+    given-names: "Adeilton"
+    alias: "adeiltonpessini"
+repository-code: "https://github.com/adeiltonpessini/kit-memoria-ia"
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-11-11
+keywords:
+  - claude-code
+  - agents-md
+  - agent-skills
+  - ai-coding
+  - memoria
+  - token

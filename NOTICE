@@ -1,0 +1,22 @@
+kit-memoria-ia
+Copyright 2026 Adeilton Pessini (https://github.com/adeiltonpessini)
+
+Este produto é distribuído sob a Apache License 2.0 (arquivo LICENSE).
+
+Quem redistribuir este trabalho, inteiro ou em parte, com ou sem modificação, precisa manter
+este arquivo NOTICE, o LICENSE e os avisos de autoria dos arquivos (Apache-2.0, seção 4).
+
+O nome "kit-memoria-ia" e o nome do autor não podem ser usados para endossar ou promover
+trabalho derivado sem permissão escrita (Apache-2.0, seção 6). Veja MARCA.md.
+
+Este produto inclui trabalho de terceiros, cada um sob a própria licença:
+
+- Skills "grilling", "pr" e "wizard": adaptadas de mattpocock/skills
+  (https://github.com/mattpocock/skills), MIT, Copyright (c) 2026 Matt Pocock.
+  Texto em LICENSES/MIT-mattpocock-skills.txt.
+- tools/claude/guard-git.mjs: adaptado da skill git-guardrails de mattpocock/skills, MIT.
+- Skill "graphify": versão enxuta da skill do projeto graphify
+  (https://github.com/safishamsi/graphify), MIT, Copyright (c) 2026 Safi Shamsi.
+  Texto em LICENSES/MIT-graphify.txt.
+- Seção "Summary" da skill "pr": vem da skill show-me de Dex Horthy (HumanLayer,
+  https://github.com/humanlayer/skills), MIT. Detalhes em .claude/skills/pr/CREDITS.md.

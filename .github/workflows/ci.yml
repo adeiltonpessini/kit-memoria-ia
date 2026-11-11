@@ -1,0 +1,37 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - name: sintaxe
+        run: for f in $(git ls-files '*.mjs'); do node --check "$f"; done
+      - name: testes
+        run: node --test tools/claude/*.test.mjs
+      - name: tamanho das skills
+        run: node tools/claude/skills-audit.mjs
+      - name: todo .mjs com cabeçalho de licença
+        run: |
+          faltam=$(git ls-files '*.mjs' | xargs grep -L 'SPDX-License-Identifier' || true)
+          if [ -n "$faltam" ]; then echo "sem SPDX: $faltam"; exit 1; fi
+      - name: kit.mjs instala e inicia num HOME limpo
+        run: |
+          export HOME="$RUNNER_TEMP/home"; mkdir -p "$HOME/.claude" "$HOME/.codex"
+          node kit.mjs instalar
+          mkdir -p "$RUNNER_TEMP/proj" && cd "$RUNNER_TEMP/proj"
+          node "$HOME/.kit-memoria-ia/kit.mjs" iniciar
+          node "$HOME/.kit-memoria-ia/kit.mjs" iniciar
+          test "$(grep -c 'kit-memoria-ia:inicio' AGENTS.md)" = 1
+          node "$HOME/.kit-memoria-ia/kit.mjs" diagnostico

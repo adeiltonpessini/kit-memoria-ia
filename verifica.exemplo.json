@@ -1,0 +1,30 @@
+{
+  "_leia": "Copie para <projeto>/.claude/verifica.json e ajuste. caminho = regex sobre o caminho relativo do arquivo mexido (sem commit); comando roda na raiz do repo (bash); rotulo é só o nome na mensagem. Use checagem RÁPIDA: o hook roda a cada fim de vez. Em JSON, barra de regex se escreve com duas barras e borda de palavra é \\b.",
+  "areas": [
+    {
+      "caminho": "^web/.*\\.(js|jsx|ts|tsx)$",
+      "comando": "cd web && [ -d node_modules ] || exit 0; npm run --silent lint",
+      "rotulo": "web (node/npm lint)"
+    },
+    {
+      "caminho": "^api/.*\\.py$",
+      "comando": "cd api && if command -v ruff >/dev/null; then ruff check .; else python -m compileall -q .; fi",
+      "rotulo": "api (python ruff)"
+    },
+    {
+      "caminho": "^servico/.*\\.go$",
+      "comando": "cd servico && go vet ./...",
+      "rotulo": "servico (go vet)"
+    },
+    {
+      "caminho": "^app/.*\\.(cs|csproj|xaml)$",
+      "comando": "dotnet build app/App.sln -v q --nologo",
+      "rotulo": "app (dotnet build)"
+    },
+    {
+      "caminho": "^\\.claude/(skills|agents)/",
+      "comando": "node $HOME/.claude/kit/tools/claude/skills-audit.mjs",
+      "rotulo": "skills e agentes"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name: Problema
+description: Algo não funcionou como o README diz
+labels: [bug]
+body:
+  - type: input
+    id: ia
+    attributes:
+      label: Qual IA
+      placeholder: Claude Code 2.x, Codex, Gemini CLI, Copilot, Cursor...
+    validations:
+      required: true
+  - type: input
+    id: so
+    attributes:
+      label: Sistema e Node
+      placeholder: Windows 11 / macOS / Linux, node --version
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: O que você fez e o que aconteceu
+      description: Comando rodado e a saída. Tire caminhos e nomes privados.
+    validations:
+      required: true
