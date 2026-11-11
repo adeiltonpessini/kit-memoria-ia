@@ -19,16 +19,16 @@ tem **duas metades**: o registro (`docs/knowledge/licoes/`) e a regra no lugar c
 1. **Reproduza ou prove a causa hoje.** Memória é pista: rode o comando, ache o `caminho:linha`.
    Sem prova, a lição fica como suspeita no handoff, não vira regra.
 2. **Procure se já existe**: `rg -il "<termo>" docs/knowledge docs/agentes .claude/skills`
-   e `node $HOME/.claude/kit/tools/knowledge/akita.mjs search "<termo>"`. Existe? Atualize `verificada-em` e a
+   e `node "$HOME/.kit-memoria-ia/kit.mjs" buscar "<termo>"`. Existe? Atualize `verificada-em` e a
    regra; não crie outra.
-3. **Escreva:** `node $HOME/.claude/kit/tools/knowledge/remember.mjs "<regra curta>" --type licao`. Preencha sintoma,
+3. **Escreva:** `node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<regra curta>" --type licao`. Preencha sintoma,
    causa verificada, regra no imperativo, como detectar e onde a regra mora.
 4. **Leve a regra para onde ela age** (escolha o mais forte que couber):
    | Força | Onde | Quando |
    |---|---|---|
    | 1 | teste, gate ou guarda em script | dá para detectar por máquina |
-   | 2 | "Armadilhas" do playbook do agente da área (`docs/agentes/`) | vale para uma área |
-   | 3 | `docs/agentes/_padroes-comuns.md` | vale para todo agente (raro: pesa em toda sessão) |
+   | 2 | "Armadilhas" do playbook do agente da área, se o projeto tiver um | vale para uma área |
+   | 3 | `AGENTS.md` do projeto | vale para todo agente (raro: pesa em toda sessão) |
    | 4 | skill relacionada (seção Gotchas) | vale para um procedimento |
    Uma linha, com link para a lição: `- <regra> ([[licoes/<slug>]])`.
 5. **Commit junto**: lição + regra no mesmo commit, `docs(licao): <regra>`.

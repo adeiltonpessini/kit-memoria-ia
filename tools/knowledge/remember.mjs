@@ -6,11 +6,11 @@
 // .md curado e versionado em docs/knowledge/, que o `rg` acha depois.
 //
 // Uso:
-//   node $HOME/.claude/kit/tools/knowledge/remember.mjs "cache de sessão no redis"               # decisão
-//   node $HOME/.claude/kit/tools/knowledge/remember.mjs "migração do banco" --type session      # handoff
-//   node $HOME/.claude/kit/tools/knowledge/remember.mjs "build quebra sem a env X" --type licao  # gotcha
-//   node $HOME/.claude/kit/tools/knowledge/remember.mjs "ADR cookies" --type misc
-//   node $HOME/.claude/kit/tools/knowledge/remember.mjs "tema" --type session --print           # só imprime
+//   node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "cache de sessão no redis"               # decisão
+//   node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "migração do banco" --type session      # handoff
+//   node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "build quebra sem a env X" --type licao  # gotcha
+//   node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "ADR cookies" --type misc
+//   node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "tema" --type session --print           # só imprime
 //
 // Flags:
 //   --type decision|session|licao|misc   (default: decision)
@@ -38,7 +38,7 @@ for (let i = 0; i < argv.length; i++) {
 }
 const title = words.join(" ").trim()
 if (!title) {
-  console.error('uso: node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>" [--type decision|session|licao|misc] [--print]')
+  console.error('uso: node $HOME/.kit-memoria-ia/tools/knowledge/remember.mjs "<título>" [--type decision|session|licao|misc] [--print]')
   process.exit(2)
 }
 

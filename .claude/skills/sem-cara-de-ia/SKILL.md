@@ -29,7 +29,7 @@ para o leitor ("você"). Gíria técnica do Brasil é bem-vinda ("sobe", "cai", 
 
 ## Procedimento
 1. Escreva. Depois leia em voz alta (mentalmente): onde você engasgar, está artificial.
-2. Rode o lint na fatia que tocou: `node $HOME/.claude/kit/tools/texto/cara-de-ia.mjs <arquivo|pasta> [...]`
+2. Rode o lint na fatia que tocou: `node "$HOME/.kit-memoria-ia/tools/texto/cara-de-ia.mjs" <arquivo|pasta> [...]`
    (só stdlib). Exit 1 com os achados por linha. Falso positivo
    justificado → comentário `cara-de-ia: ok` na linha (markdown/TSX/JSON não: reescreva).
 3. Em PR: corpo sem rodapé de IA, sem emoji, Summary em prosa de 2–4 frases. A skill `pr` segue

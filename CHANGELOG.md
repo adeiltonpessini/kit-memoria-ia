@@ -2,6 +2,20 @@
 
 Formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), versões [SemVer](https://semver.org/lang/pt-BR/).
 
+## [1.1.0] - 2026-11-11
+
+### Adicionado
+- README em inglês (`README.en.md`) e imagens animadas de fluxo, claras e escuras, em `assets/`.
+- Créditos a Fabio Akita (método Akita e ai-memory) no NOTICE e no README.
+- Imagem de prévia para redes sociais (`assets/social.png`).
+
+### Corrigido
+- Skills apontavam para `~/.claude/kit/tools`, que só existe no Claude Code. Agora usam `kit.mjs lembrar`,
+  `kit.mjs buscar` e `~/.kit-memoria-ia/tools`, que valem para qualquer IA.
+- `spec-primeiro`, `skill-smith`, `licao-aprendida` e `skills-audit` citavam um arquivo que o kit não cria;
+  agora citam o `AGENTS.md` do projeto.
+- `assets/`, `README.en.md` e `CHANGELOG.md` entram no pacote npm.
+
 ## [1.0.0] - 2026-11-11
 
 ### Adicionado

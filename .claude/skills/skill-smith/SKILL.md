@@ -49,7 +49,7 @@ tools: Read, Grep, Glob, Bash      # mínimo necessário (menor privilégio)
 model: sonnet                       # sonnet p/ a maioria; opus só p/ tarefa difícil
 ---
 Você é <Nome>, <papel>. ANTES de agir leia (1x):
-`docs/agentes/_padroes-comuns.md` e `docs/agentes/<NN-playbook>.md`.
+`AGENTS.md` do projeto e o playbook da área, se existir.
 Siga a regra nº1 do projeto. Devolva só a CONCLUSÃO (sem dumps).
 Você tem liberdade de criar skills (via skill-smith) se achar importante.
 ```
@@ -63,7 +63,7 @@ O corpo é **fino**: referencia o playbook (fonte da verdade), não duplica. Atu
 ## Depois de criar (sempre)
 1. Teste mentalmente os gatilhos da `description` (é o que faz a skill ser auto-selecionada).
 2. Garanta que os comandos batem com o sistema real (skill `run-sql`/`busca-eficiente` p/ conferir).
-3. Anote a decisão: `node $HOME/.claude/kit/tools/knowledge/remember.mjs "nova skill/agente: <nome>"` se for não-óbvio.
+3. Anote a decisão: `node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "nova skill/agente: <nome>"` se for não-óbvio.
 4. Permissões: se a skill roda comandos novos repetidos, considere adicionar à allowlist em
    `.claude/settings.json` (`permissions.allow`).
 

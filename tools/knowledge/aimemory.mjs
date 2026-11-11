@@ -15,10 +15,10 @@
  * pesavam 33,9 KB (~8,5k tokens) em TODA requisição.
  *
  * Uso:
- *   node $HOME/.claude/kit/tools/knowledge/aimemory.mjs status
- *   node $HOME/.claude/kit/tools/knowledge/aimemory.mjs recent [-n 10]
- *   node $HOME/.claude/kit/tools/knowledge/aimemory.mjs query "<pergunta>" [-n 8]
- *   node $HOME/.claude/kit/tools/knowledge/aimemory.mjs pull [-n 10]     # grava em sessions/auto/
+ *   node $HOME/.kit-memoria-ia/tools/knowledge/aimemory.mjs status
+ *   node $HOME/.kit-memoria-ia/tools/knowledge/aimemory.mjs recent [-n 10]
+ *   node $HOME/.kit-memoria-ia/tools/knowledge/aimemory.mjs query "<pergunta>" [-n 8]
+ *   node $HOME/.kit-memoria-ia/tools/knowledge/aimemory.mjs pull [-n 10]     # grava em sessions/auto/
  *
  * Falha SEMPRE em silêncio com exit 0 quando o servidor está fora do ar — é rede de
  * segurança, não pode quebrar sessão de ninguém.

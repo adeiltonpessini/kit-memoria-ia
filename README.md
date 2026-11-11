@@ -8,7 +8,8 @@
   <a href="#como-funciona">Como funciona</a> ·
   <a href="#comandos">Comandos</a> ·
   <a href="#skills-incluídas">Skills</a> ·
-  <a href="GUIA.md">Guia completo</a>
+  <a href="GUIA.md">Guia completo</a> ·
+  <a href="README.en.md">English</a>
   <br><br>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licen%C3%A7a-Apache--2.0-17171a?style=flat-square" alt="Licença Apache-2.0"></a>
   <img src="https://img.shields.io/badge/node-22%2B-17171a?style=flat-square" alt="Node 22+">
@@ -118,6 +119,8 @@ E dois agentes para o Claude Code: `Explore` (busca só de leitura, em modelo ba
 
 - **[ripgrep](https://github.com/BurntSushi/ripgrep)** (`rg`): recomendado. Sem ele a busca gasta mais.
 - **[graphify](https://github.com/safishamsi/graphify)**: grafo do código para perguntas de estrutura.
+- **[ai-memory](https://github.com/akitaonrails/ai-memory)**, de Fabio Akita: captura a sessão sozinho. O
+  `tools/knowledge/aimemory.mjs` traz o que ele gravou para `docs/knowledge/sessions/auto/`.
 - **Checagem automática** (Claude Code): copie `verifica.exemplo.json` para `<projeto>/.claude/verifica.json` e
   diga qual comando roda em qual pasta. O hook roda a checagem da área que mudou antes de a IA encerrar.
 - **Guarda do git** (Claude Code): `node kit.mjs instalar --com-guard-git` bloqueia `reset --hard`,
@@ -156,6 +159,11 @@ Copyright 2026 [Adeilton Pessini](https://github.com/adeiltonpessini). Distribu�
 [Apache License 2.0](LICENSE): uso livre, inclusive comercial, desde que você mantenha o [NOTICE](NOTICE) e os
 avisos de autoria. O nome do projeto não pode ser usado para endossar trabalho derivado; veja [MARCA.md](MARCA.md).
 Partes de terceiros estão listadas no NOTICE, cada uma com a sua licença.
+
+**Créditos:** [Matt Pocock](https://github.com/mattpocock/skills) (grilling, pr, wizard, guarda do git),
+[Safi Shamsi](https://github.com/safishamsi/graphify) (graphify), [Dex Horthy / HumanLayer](https://github.com/humanlayer/skills)
+(resumo do pr) e [Fabio Akita](https://akitaonrails.com) ([ai-memory](https://github.com/akitaonrails/ai-memory)), que inspirou a
+memória em markdown sem RAG.
 
 Para citar: [CITATION.cff](CITATION.cff). Para contribuir: [CONTRIBUTING.md](CONTRIBUTING.md).
 

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 Adeilton Pessini e contribuidores do kit-memoria-ia
 // Lint de "cara de IA" em texto que gente lê. Só stdlib. Uso:
-//   node $HOME/.claude/kit/tools/texto/cara-de-ia.mjs <arquivo|pasta> [...]   (exit 1 se achar algo)
+//   node $HOME/.kit-memoria-ia/tools/texto/cara-de-ia.mjs <arquivo|pasta> [...]   (exit 1 se achar algo)
 // Marca por linha: travessão, muleta de transição, jargão vazio, tríade, emoji em título,
 // rodapé de IA, inglês de interface. Falso positivo justificado: comentário `cara-de-ia: ok`
 // na mesma linha. Skill: .claude/skills/sem-cara-de-ia/SKILL.md
@@ -34,7 +34,7 @@ function arquivos(p, out = []) {
 }
 
 const alvos = process.argv.slice(2)
-if (!alvos.length) { console.error('uso: node $HOME/.claude/kit/tools/texto/cara-de-ia.mjs <arquivo|pasta> [...]'); process.exit(2) }
+if (!alvos.length) { console.error('uso: node $HOME/.kit-memoria-ia/tools/texto/cara-de-ia.mjs <arquivo|pasta> [...]'); process.exit(2) }
 
 let achados = 0
 const porRegra = new Map()

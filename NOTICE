@@ -20,3 +20,12 @@ Este produto inclui trabalho de terceiros, cada um sob a própria licença:
   Texto em LICENSES/MIT-graphify.txt.
 - Seção "Summary" da skill "pr": vem da skill show-me de Dex Horthy (HumanLayer,
   https://github.com/humanlayer/skills), MIT. Detalhes em .claude/skills/pr/CREDITS.md.
+
+Inspiração, sem código copiado:
+
+- O nome "método Akita" (skills "remember" e "busca-eficiente", tools/knowledge/akita.mjs)
+  homenageia Fabio Akita (https://akitaonrails.com), pela ideia de guardar o conhecimento
+  do projeto em markdown simples e buscar por texto, sem RAG de embeddings.
+- tools/knowledge/aimemory.mjs conversa com o ai-memory de Fabio Akita
+  (https://github.com/akitaonrails/ai-memory, MIT) pela API dele. Nenhum código do
+  ai-memory vem neste kit; quem quiser usar instala o ai-memory à parte.

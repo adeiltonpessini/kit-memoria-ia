@@ -10,22 +10,22 @@ Estrutura: `decisions/` (problema→decisão→razão→resultado), `sessions/` 
 
 ## Criar
 ```bash
-node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>"                 # decisão (default)
-node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>" --type session  # handoff de sessão
-node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>" --type licao     # gotcha verificado (skill licao-aprendida)
-node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>" --type misc      # ADR/nota
-node $HOME/.claude/kit/tools/knowledge/remember.mjs "<título>" --print          # só imprime o template
+node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<título>"                 # decisão (default)
+node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<título>" --type session  # handoff de sessão
+node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<título>" --type licao     # gotcha verificado (skill licao-aprendida)
+node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<título>" --type misc      # ADR/nota
+node "$HOME/.kit-memoria-ia/kit.mjs" lembrar "<título>" --print          # só imprime o template
 ```
 Cria o `.md` com template + avisa se houver duplicata. Preencha o corpo e salve.
 
 ## Buscar (antes de criar — evita duplicar)
 ```bash
-node $HOME/.claude/kit/tools/knowledge/akita.mjs search "<tema>"   # ranqueado FTS5 (método Akita) — começe aqui
+node "$HOME/.kit-memoria-ia/kit.mjs" buscar "<tema>"   # ranqueado FTS5 (método Akita) — comece aqui
 rg "<termo>" docs/knowledge/                       # exato/literal
 ```
 
 ## Quando usar handoff de sessão
-No fim de uma frente de trabalho relevante: `--type session`. O hook `SessionStart`
+No fim de uma frente de trabalho relevante: `--type session`. No Claude Code, o hook `SessionStart`
 (`~/.claude/kit/tools/knowledge/session-handoff.mjs`) injeta o handoff mais recente na próxima sessão.
 
 ⚠️ **O hook injeta SÓ o frontmatter + a PRIMEIRA seção `#` (cap 3.000 chars)** — economia de

@@ -38,4 +38,4 @@ claro + contrato explícito + verificação real.
 - [ ] Verificado rodando, não só "parece certo".
 - [ ] Idempotente/reentrante quando aplicável.
 
-Ver: `docs/agentes/_padroes-comuns.md` (Definition of Done completo), `busca-eficiente`, `docs-context7`.
+Ver: `AGENTS.md` do projeto (regras e definição de pronto), `busca-eficiente`, `docs-context7`.

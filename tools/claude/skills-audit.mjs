@@ -95,7 +95,7 @@ if (existsSync(dirAg)) {
 }
 
 // ---- arquivos lidos toda sessão ----
-const fixos = ["CLAUDE.md", "docs/agentes/_padroes-comuns.md"];
+const fixos = ["CLAUDE.md", "AGENTS.md"];
 let totalFixo = 0;
 for (const f of fixos) {
   if (!existsSync(f)) continue;

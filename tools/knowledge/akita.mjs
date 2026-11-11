@@ -11,12 +11,12 @@
 // conhecimento (grepe a fatia → leia só ela, mas agora ordenado por relevância).
 //
 // Uso:
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs search "timeout no login" [-n 8]
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs search "linha G H dosagem"   # siglas 1 letra OK
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs index            # (re)constrói o índice
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs status           # estado do índice
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs search "..." --rebuild      # força reindex
-//   node $HOME/.claude/kit/tools/knowledge/akita.mjs search "..." --root docs/agentes
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs search "timeout no login" [-n 8]
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs search "linha G H dosagem"   # siglas 1 letra OK
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs index            # (re)constrói o índice
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs status           # estado do índice
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs search "..." --rebuild      # força reindex
+//   node $HOME/.kit-memoria-ia/tools/knowledge/akita.mjs search "..." --root docs/agentes
 //
 // O índice é CACHE regenerável (docs/knowledge/.cache/akita.db, na pasta do projeto) — não vai pro git.
 // Auto-(re)indexa quando o conjunto de .md muda (path+mtime+size → pega edição,

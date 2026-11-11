@@ -26,7 +26,7 @@ hook deixa de fora por ser lento (teste completo, build de produção). Sem o ar
 | .NET | `dotnet build` e `dotnet test` | `0 Error(s)`, `Passed!` |
 | Rust | `cargo clippy && cargo test` | sem erro, `test result: ok` |
 | Tela web mexida | abrir no navegador e olhar a tela | nada cortado nem sobreposto |
-| Skills e agentes | `node $HOME/.claude/kit/tools/claude/skills-audit.mjs` | sem estouro |
+| Skills e agentes | `node "$HOME/.kit-memoria-ia/tools/claude/skills-audit.mjs"` | sem estouro |
 | Ferramentas do kit | `node --test <cada arquivo .test.mjs>` | `fail 0` |
 
 ## 3. Conferir de verdade

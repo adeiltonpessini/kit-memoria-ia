@@ -3,7 +3,7 @@ name: busca-eficiente
 description: Use sempre que for procurar algo no repo ("onde está X", "como usamos Y", "o que quebra se mudar Z") antes de ler arquivo inteiro. Playbook econômico: ripgrep + leitura da fatia mínima, ast-grep para padrão de código, fd para arquivo, akita para o acervo.
 ---
 
-# busca-eficiente — método Akita no talo (grep > ler tudo)
+# busca-eficiente: grep antes de ler tudo (método Akita)
 
 Princípio: **grepe a fatia → leia só ela.** Nunca despeje arquivo/repo inteiro no contexto.
 Cada linha trazida custa token; busca afiada é a maior economia que existe.
@@ -35,7 +35,7 @@ Cada linha trazida custa token; busca afiada é a maior economia que existe.
 ## Conhecimento curado (markdown grepável, NUNCA RAG)
 Escada do mais barato/relevante pro mais caro:
 1. **Ranqueado (método Akita, FTS5) — comece por aqui p/ "onde decidimos X":**
-   `node $HOME/.claude/kit/tools/knowledge/akita.mjs search "<consulta>" -n 8`
+   `node "$HOME/.kit-memoria-ia/kit.mjs" buscar "<consulta>" -n 8`
    Full-text BM25 sobre `docs/knowledge/**`, acento-insensível, siglas de linha (G/H/D) OK.
    Devolve caminho + título + snippet ranqueado → aí leia só a fatia com `rg -n`. Zero rede, zero deps,
    zero embedding (FTS5 é lexical, não vetor). Auto-reindexa quando os `.md` mudam.
