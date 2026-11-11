@@ -1,25 +1,32 @@
-name: Problema
-description: Algo não funcionou como o README diz
+name: Algo não funcionou
+description: Um comando deu erro ou fez outra coisa que não a esperada
 labels: [bug]
 body:
-  - type: input
-    id: ia
+  - type: textarea
+    id: comando
     attributes:
-      label: Qual IA
-      placeholder: Claude Code 2.x, Codex, Gemini CLI, Copilot, Cursor...
-    validations:
-      required: true
-  - type: input
-    id: so
-    attributes:
-      label: Sistema e Node
-      placeholder: Windows 11 / macOS / Linux, node --version
+      label: O que você rodou
+      description: O comando e a pasta onde rodou.
+      placeholder: node "$HOME/.kit-memoria-ia/kit.mjs" iniciar
     validations:
       required: true
   - type: textarea
-    id: passos
+    id: aconteceu
     attributes:
-      label: O que você fez e o que aconteceu
-      description: Comando rodado e a saída. Tire caminhos e nomes privados.
+      label: O que aconteceu e o que você esperava
+      description: Cole a mensagem de erro, se houver. Tire caminho, nome ou dado que seja seu.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostico
+    attributes:
+      label: Saída do diagnóstico
+      description: Resultado de `node "$HOME/.kit-memoria-ia/kit.mjs" diagnostico`.
+      render: text
+  - type: input
+    id: ambiente
+    attributes:
+      label: Sistema, versão do Node e IA
+      placeholder: Windows 11, Node 22.12, Claude Code
     validations:
       required: true
